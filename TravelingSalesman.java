@@ -24,10 +24,9 @@ public class TravelingSalesman
 			}
 			readEdges(edgeFile, graph);
 			ArrayList<Chromosome> population = new ArrayList<>();
-			ArrayList<Vertex> vertices = graph.getVertices();
 			for(int i = 0; i < populationSize; i++)
 			{
-				Chromosome chromo = new Chromosome(vertices);
+				Chromosome chromo = new Chromosome(graph);
 				population.add(chromo);
 			}
 			ArrayList<Chromosome>sorted = sort(population);

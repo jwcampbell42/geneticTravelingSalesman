@@ -7,8 +7,9 @@ public class Chromosome {
 	private Vertex start;
 	Random random = new Random();
 	private ArrayList<Edge> edges = new ArrayList<>();
-	public Chromosome(ArrayList<Vertex> vertices)
+	public Chromosome(Graph graph)
 	{
+		ArrayList<Vertex> vertices = graph.getVertices();
 		start = vertices.get(0);
 		for(Vertex v: vertices) genes.add(v);
 		genes.remove(0);
